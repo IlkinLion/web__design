@@ -1,0 +1,303 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.container {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+}
+header {
+    width: 100%;
+    height: 10vh;
+    background: #35424A;
+    position: relative;
+}
+.nav--left {
+    width: 50%;
+    height: 100%;
+    background-color: transparent;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    white-space: pre;
+}
+.nav--left .nav.one {
+    color: orangered;
+    text-transform: capitalize;
+    font-size: 20px;
+    font-weight: 600;
+}
+.nav--left .nav.two {
+    color: #fff;
+    text-transform: capitalize;
+    font-size: 20px;
+    font-weight: 600;
+}
+nav {
+    background: transparent;
+    width: 30%;
+    height: 100%;
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    right: 0;
+}
+nav ul {
+    float: right;
+    margin-right: 20px;
+}
+nav ul li {
+    display: inline-block;
+    line-height: 80px;
+    margin: 0 5px;
+}
+nav ul li a {
+    color: white;
+    font-size: 17px;
+    padding: 7px 13px;
+    border-radius: 3px;
+    text-transform: uppercase;
+    text-decoration-line: none;
+}
+a .active a:hover {
+    background: #35424A;
+    transition: .5s;
+}
+.checkbtn {
+    font-size: 30px;
+    color: white;
+    float: right;
+    cursor: pointer;
+    display: none;
+}
+#check {
+    display: none;
+}
+.container header::before {
+    content: '';
+    width: 100%;
+    height: 0.5vh;
+    top: 100%;
+    background: orangered;
+    position: absolute;
+}
+section {
+    width: 100%;
+    height: 45vh;
+    background: url(../image/background.jpg);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.section--main {
+    width: 100%;
+    height: 35vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    white-space: pre;
+}
+.section--main .affordable {
+    font-size: 35px;
+    font-weight: 500;
+    text-transform: capitalize;
+}
+.section--down {
+    width: 100%;
+    height: 10vh;
+    background: #35424A;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+}
+.section--down .subcribe {
+    font-size: 18px;
+    font-weight: 600;
+    position: absolute;
+    left: 10%;
+    color: #fff;
+}
+.section--down .enter {
+    right: 3%;
+    position: absolute;
+    border: none;
+    outline: none;
+}
+.section--down .enter input{
+    height: 30px;
+    border: none;
+    outline: none;
+}
+.section--down .enter button{
+    height: 30px;
+    width: 60px;
+    font-weight: 600;
+    background-color: orangered;
+    cursor: pointer;
+}
+.section--down .enter button:hover {
+    background-color: red;
+}
+footer {
+    width: 100%;
+    height: 45vh;
+    display: flex;
+    flex-direction: row;
+    position: relative;
+}
+.footer--details {
+    width: 100%;
+    height: 35vh;
+    display: flex;
+    flex-direction: row;
+    position: relative;
+}
+.footer--one {
+    width: 100%;
+    height: 35vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    white-space: pre;
+}
+.footer--one img {
+    width: 24%;
+    height: auto;
+}
+.footer--one .html {
+    font-weight: 600;
+    font-size: 14px;
+}
+.footer--one .html--another {
+    font-size: 14px;
+}
+.footer--two {
+    width: 100%;
+    height: 10vh;
+    bottom: 0;
+    background: orangered;
+    position: absolute;
+    text-align: center;
+    line-height: 10vh;
+    font-weight: 600;
+    text-transform: capitalize;
+}
+@media (max-width: 768px) {
+    .container {
+        width: 100%;
+        height: 150vh;
+        position: relative;
+    }
+    .checkbtn {
+        display: block;
+    }
+    header {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+    }
+    .nav--left {
+        left: 20%;
+    }
+    ul {
+        position: fixed;
+        width: 100%;
+        height: 50vh;
+        padding-left: -20%;
+        background: gray;
+        top: 53px;
+        left: -220%;
+        text-align: center;
+        align-items: center;
+        transition: all .6s;
+    }
+    nav ul li {
+        display: block;
+        margin: 50px 0;
+        line-height: 30px;
+    }
+    nav ul li a {
+        font-size: 20px;
+    }
+    a:hover , a .active {
+        color: aqua;
+    }
+    #check:checked ~ ul {
+        left: 0;
+    }
+    header nav label i {
+        left: 30%;
+    }
+    .section {
+        width: 40%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        position: relative;
+    }
+    .section--main {
+        display: flex;
+        flex-direction: column;
+    }
+    .section--down {
+        height: 20vh;
+        position: absolute;
+        top: 60vh;   
+    }
+    .section--down .enter {
+        top: 12vh;
+        left: 30%;
+        align-items: center;
+    }  
+    .section--down .subcribe {
+        left: 30%;
+        top: 5vh;
+    }
+    footer {
+        position: relative;
+    }
+    .footer--details {
+        width: 100%;
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        top: 35vh;
+    }
+    .footer--two {
+        top: 130vh;
+        position: absolute;
+    }
+    .footer--one {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        margin: 15px;
+    }
+    .footer--one .html {
+        font-size: 20px;
+    }
+    .footer--one .html--another {
+        font-size: 16px;
+        left: 10%;
+    }
+    footer .footer--one .text{
+        width: 10%;
+        left: 33%;
+        position: absolute;
+        text-align: center;
+    } 
+}
